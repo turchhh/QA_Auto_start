@@ -19,6 +19,12 @@ public class PhoneBookSelectors {
         FirstTest.pause(3);
         WebElement btnAbout = driver.findElement(By.cssSelector("a[href='/about']"));
         btnAbout.click();
+        WebElement div = driver.findElement(By.cssSelector("div[class='about_main__2Uv5W']"));
+        String divText = div.getText();
+        System.out.println(divText);
+        WebElement h1 = driver.findElement(By.cssSelector("div[class='about_main__2Uv5W']>h1"));
+        String h1Text = h1.getText();
+        System.out.println(h1Text);
         FirstTest.pause(3);
         WebElement btnLogin = driver.findElement(By.cssSelector("a[href='/login']"));
         btnLogin.click();
@@ -31,10 +37,5 @@ public class PhoneBookSelectors {
         FirstTest.pause(2);
         WebElement btnLogin1 = driver.findElement(By.name("login"));
         btnLogin1.click();
-
-
-
-
-
     }
 }
